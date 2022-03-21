@@ -75,3 +75,137 @@ function createCard(multiply, age) {
 //invoke function
 //createCard(true, 29);
 
+function handleMenu() {
+    const hamburgerIcon = document.querySelector('.hamburger');
+    const menuNavElement = document.querySelector('.menu-nav');
+    const closeElement = document.querySelector('.close');
+    menuNavElement.classList.add('hidden');
+    hamburgerIcon.addEventListener('click', () => {
+        menuNavElement.classList.remove('hidden');
+    });
+    closeElement.addEventListener('click', () => {
+        menuNavElement.classList.add('hidden');
+    });
+};
+
+handleMenu();
+
+let newFirstName = 'Nico'; // string, numbers
+//console.log(newFirstName)
+
+const names = [
+    'Frederikke', // index 0
+    'Gina', // index 1
+    'Nico', // index 2
+    'Dino', // 3
+    'Carlo' // 4
+];
+names[5]  = 'Max';
+names[6]  = 'Ole';
+names[7]  = 'Sofia';
+names[8]  = 'Inger';
+names[9]  = 'Aleksandra';
+names[10] = 'Simen';
+
+//console.log(names.length);
+
+const things = ['Dino', 'Biden', 44, true, 'ny verdi'];
+
+////console.log(things); // undefined
+
+// objects
+const person = {
+    firstName: 'Dino',
+    lastName: 'Biden',
+    age: 44,
+    male: true
+};
+
+person.female = false;
+
+//console.log(person)
+
+const persons = [
+    {
+        id: 252355562,
+        firstName: 'Dino',
+        lastName: 'Biden',
+        age: 44,
+        male: true,
+        hobbies: ['movies', 'football']
+    },
+    {
+        firstName: 'Nico',
+        lastName: 'Diaz',
+        age: 26,
+        male: true
+    },
+    {
+        firstName: 'Nico',
+        lastName: 'Diaz',
+        age: 26,
+        male: true
+    }
+]
+
+const cars = [
+    {
+        id: 142432434,
+        pruductName: 'Volvo',
+        version: 'X10',
+        traction: 'Manual',
+        year: 2012,
+        fuel: ['Electric', 'Gas', 'Carbon']
+    },
+    {
+        id: 142432434,
+        pruductName: 'Fiat',
+        version: 'BB2',
+        traction: 'Manual',
+        year: 2014,
+        fuel: ['Electric']
+    },
+    {
+        id: 142476434,
+        pruductName: 'Ford',
+        version: 'XFr trct',
+        traction: 'Manual',
+        year: 2022,
+        fuel: ['Electric', 'Gas']
+    },
+    {
+        id: 142423434,
+        pruductName: 'Porche',
+        version: 'XF4',
+        traction: 'Automatic',
+        year: 2021,
+        fuel: ['Electric']
+    },
+    {
+        id: 142906434,
+        pruductName: 'Alfa Romeo',
+        version: 'XF1',
+        traction: 'Manual',
+        year: 2018,
+        fuel: ['Gas']
+    },
+    {
+        id: 142906434,
+        pruductName: 'Mercedes',
+        version: 'XF1',
+        traction: 'Manual',
+        year: 2018,
+        fuel: ['Gas'],
+        image: 'http'
+    }
+];
+
+const listBox = document.createElement('ul');
+const container = document.querySelector('.app')
+
+cars.forEach(car => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${car.pruductName} - ${car.year}`;
+    listBox.append(listItem);
+    container.append(listBox);
+});
