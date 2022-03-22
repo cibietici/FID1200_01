@@ -6,6 +6,10 @@ body {
     width: 100%;
     height: 600px;
     background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
 }
 
 .app-reverse {
@@ -104,4 +108,11 @@ main ul li {
     background-color: #ccc;
     font-size: 24px;
     text-align: center;
+}
+
+#value1, #value2, #result {
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 18px;
+    margin-top: 5px
 }

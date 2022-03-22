@@ -1,3 +1,6 @@
+import { calculate } from './calculate.js';
+
+calculate(); // invoke calculate function
 //import { firstName } from './utils.js';
 
 /* const firstName = 'Nicolas'; // data type: String
@@ -88,7 +91,7 @@ function handleMenu() {
     });
 };
 
-handleMenu();
+handleMenu(); // invoke funksjonen for håndtere meny
 
 let newFirstName = 'Nico'; // string, numbers
 //console.log(newFirstName)
@@ -137,7 +140,7 @@ const person = {
     male: true
 };
 
-person.female = false;
+person.female = false; // vi kan legge til key-value pair til objekten
 
 //console.log(person)
 
@@ -162,7 +165,7 @@ const persons = [
         age: 26,
         male: true
     }
-]
+];
 
 const cars = [
     {
@@ -238,9 +241,9 @@ const newCarsArray = cars.map(car => {
 
 const findedItem = cars.find(car => {
     return car.pruductName === 'Alfa Romeo';
-})
+});
 
-console.log(findedItem.year)
+//console.log(findedItem.year)
 
 const listBox = document.createElement('ul');
 const container = document.querySelector('.app');
@@ -249,5 +252,7 @@ newCarsArray.forEach(car => {
     const listItem = document.createElement('li');
     listItem.textContent = `${car.carname} - ${car.year}`;
     listBox.append(listItem);
-    container.append(listBox);
+    // container.append(listBox);  // vi legge ikke lista ut ved å kommentere
 });
+
+

@@ -1,5 +1,5 @@
 // function expression
-export const calculateMath = () => {
+/* export const calculateMath = () => {
 
     const a = prompt();
     const b = prompt();
@@ -20,4 +20,28 @@ export const calculateMath = () => {
     };
 
     return true;
+} */
+
+export function calculate() {
+    const number1 = document.querySelector('#value1');
+    const number2 = document.getElementById('value2');
+    const operation = document.getElementsByName('operation');
+    const startButton = document.getElementById('calculationButton');
+    const resultBox = document.getElementById('result');
+
+    startButton.addEventListener('click', () => {
+
+        if(operation[0].checked === true) {
+            resultBox.value = parseInt(number1.value) + parseInt(number2.value);
+        };
+        if(operation[1].checked === true) {
+            resultBox.value = number1.value - number2.value;
+        };
+        if(operation[2].checked === true) {
+            resultBox.value = number1.value * number2.value;
+        };
+        if(operation[3].checked === true) {
+            resultBox.value = number1.value / number2.value;
+        };
+    });
 }
