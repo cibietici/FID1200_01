@@ -90,3 +90,18 @@ button {
     background-color: #fff;
     color: #000;
 }
+
+main ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4px;
+}
+
+main ul li {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    font-size: 24px;
+    text-align: center;
+}

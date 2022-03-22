@@ -100,6 +100,9 @@ const names = [
     'Dino', // 3
     'Carlo' // 4
 ];
+
+//console.log(names[2]) // frederikke
+
 names[5]  = 'Max';
 names[6]  = 'Ole';
 names[7]  = 'Sofia';
@@ -107,11 +110,24 @@ names[8]  = 'Inger';
 names[9]  = 'Aleksandra';
 names[10] = 'Simen';
 
+//console.log(names)
 //console.log(names.length);
+// Simple array
+const things = [
+        'Dino', 
+        'Biden', 
+        44, 
+        true,
+        'ny verdi',
+        {
+            firstName: 'Dino',
+            lastName: 'Biden',
+            age: 44,
+            male: true
+        }
+    ];
 
-const things = ['Dino', 'Biden', 44, true, 'ny verdi'];
-
-////console.log(things); // undefined
+//console.log(things[2]); 
 
 // objects
 const person = {
@@ -150,15 +166,16 @@ const persons = [
 
 const cars = [
     {
-        id: 142432434,
+        id: 12226348867687,
         pruductName: 'Volvo',
         version: 'X10',
         traction: 'Manual',
         year: 2012,
-        fuel: ['Electric', 'Gas', 'Carbon']
+        fuel: ['Electric', 'Gas', 'Carbon'],
+        location: 'Oslo'
     },
     {
-        id: 142432434,
+        id: 14244332434,
         pruductName: 'Fiat',
         version: 'BB2',
         traction: 'Manual',
@@ -166,7 +183,7 @@ const cars = [
         fuel: ['Electric']
     },
     {
-        id: 142476434,
+        id: 1424445434,
         pruductName: 'Ford',
         version: 'XFr trct',
         traction: 'Manual',
@@ -174,15 +191,7 @@ const cars = [
         fuel: ['Electric', 'Gas']
     },
     {
-        id: 142423434,
-        pruductName: 'Porche',
-        version: 'XF4',
-        traction: 'Automatic',
-        year: 2021,
-        fuel: ['Electric']
-    },
-    {
-        id: 142906434,
+        id: 1429876434,
         pruductName: 'Alfa Romeo',
         version: 'XF1',
         traction: 'Manual',
@@ -190,7 +199,23 @@ const cars = [
         fuel: ['Gas']
     },
     {
-        id: 142906434,
+        id: 1423343434,
+        pruductName: 'Porche',
+        version: 'XF4',
+        traction: 'Automatic',
+        year: 2021,
+        fuel: ['Electric']
+    },
+    {
+        id: 142446434,
+        pruductName: 'Alfa Romeo',
+        version: 'XF2',
+        traction: 'Manual',
+        year: 2023,
+        fuel: ['Hydrogen']
+    },
+    {
+        id: 141112212306434,
         pruductName: 'Mercedes',
         version: 'XF1',
         traction: 'Manual',
@@ -200,12 +225,29 @@ const cars = [
     }
 ];
 
-const listBox = document.createElement('ul');
-const container = document.querySelector('.app')
+const filteredCars = cars.filter(car => {
+    return car.pruductName == 'Alfa Romeo';
+});
 
-cars.forEach(car => {
+const newCarsArray = cars.map(car => {
+    return {
+        carname: car.pruductName,
+        year: car.year
+    }
+});
+
+const findedItem = cars.find(car => {
+    return car.pruductName === 'Alfa Romeo';
+})
+
+console.log(findedItem.year)
+
+const listBox = document.createElement('ul');
+const container = document.querySelector('.app');
+
+newCarsArray.forEach(car => {
     const listItem = document.createElement('li');
-    listItem.textContent = `${car.pruductName} - ${car.year}`;
+    listItem.textContent = `${car.carname} - ${car.year}`;
     listBox.append(listItem);
     container.append(listBox);
 });
