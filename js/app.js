@@ -1,6 +1,9 @@
 import { calculate } from './calculate.js';
 import { getImage } from './unsplash.js';
-import { dataGet } from './stations.js'
+import { dataGet } from './stations.js';
+import { tm } from './tm.js';
+
+tm();
 
 getImage();
 

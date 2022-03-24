@@ -5,7 +5,7 @@ export const dataGet = async () => {
     try {
         const response = await fetch(url); // fetch er en promise
         const data = await response.json(); // json er en promise
-        console.log(data);
+        //console.log(data);
         const stations = JSON.parse(data.contents);
         console.log(stations.stations);
         return data;
@@ -15,4 +15,4 @@ export const dataGet = async () => {
 }
 //myAsyncFunc();
 
-console.log(dataGet())
+//console.log(dataGet())
