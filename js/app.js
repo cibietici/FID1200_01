@@ -1,4 +1,10 @@
 import { calculate } from './calculate.js';
+import { getImage } from './unsplash.js';
+import { dataGet } from './stations.js'
+
+getImage();
+
+dataGet();
 
 calculate(); // invoke calculate function
 //import { firstName } from './utils.js';
@@ -142,7 +148,7 @@ const person = {
 
 person.female = false; // vi kan legge til key-value pair til objekten
 
-//console.log(person)
+//console.log(person.firstName)
 
 const persons = [
     {
@@ -254,5 +260,7 @@ newCarsArray.forEach(car => {
     listBox.append(listItem);
     // container.append(listBox);  // vi legge ikke lista ut ved å kommentere
 });
+
+
 
 
