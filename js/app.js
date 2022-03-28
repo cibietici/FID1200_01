@@ -3,13 +3,13 @@ import { getImage } from './unsplash.js';
 import { dataGet } from './stations.js';
 import { tm } from './tm.js';
 
-tm();
+//tm();
 
-getImage();
+//getImage();
 
-dataGet();
+//dataGet();
 
-calculate(); // invoke calculate function
+//calculate(); // invoke calculate function
 //import { firstName } from './utils.js';
 
 /* const firstName = 'Nicolas'; // data type: String

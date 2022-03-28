@@ -42,16 +42,19 @@ button {
 /* menu */
 
 .hamburger {
+    position: relative;
     display: block;
     padding: 10px;
     border: none;
     background-color: rgb(255, 0, 157);
     margin: 20px 20px 20px auto;
     cursor: pointer;
+    z-index: 4;
 }
 
 .menu-nav{
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: rgba(0, 0 ,0, 0.7);
@@ -115,4 +118,12 @@ main ul li {
     background-color: #ccc;
     font-size: 18px;
     margin-top: 5px
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
