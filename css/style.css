@@ -127,3 +127,14 @@ main ul li {
     top: 0;
     left: 0;
 }
+
+.marker {
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/icons/bike.svg');
+}
