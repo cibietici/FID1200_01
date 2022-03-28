@@ -47,6 +47,14 @@ export async function mapbox() {
         new mapboxgl.Marker()
         .setLngLat([position.coords.longitude, position.coords.latitude])
         .addTo(map);
+
+        map.flyTo({
+            center: [
+            position.coords.longitude,
+            position.coords.latitude
+            ],
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+            });
     });
 };
 
