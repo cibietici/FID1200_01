@@ -42,6 +42,12 @@ export async function mapbox() {
         .setLngLat(marker.geometry.coordinates)
         .addTo(map);
     };
+    // here we check our position and show where we are
+    navigator.geolocation.getCurrentPosition((position) => {
+        new mapboxgl.Marker()
+        .setLngLat([position.coords.longitude, position.coords.latitude])
+        .addTo(map);
+    });
 };
 
 async function getStations() {
