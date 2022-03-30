@@ -3,6 +3,16 @@ import { getImage } from './unsplash.js';
 import { dataGet } from './stations.js';
 import { tm } from './tm.js';
 
+const urlString = window.location.search;
+const paramsUrl = new URLSearchParams(urlString);
+const pageValue = paramsUrl.get('page');
+
+console.log(pageValue)
+
+const urlLocation = window.location.href;
+
+console.log(urlLocation.includes('page')) // true if link has page
+
 tm();
 
 getImage();
