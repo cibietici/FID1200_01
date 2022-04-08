@@ -4,7 +4,7 @@ import { dataGet } from './stations.js';
 import { tm } from './tm.js';
 import { mapbox } from './map.js';
 
-mapbox();
+//mapbox();
 
 //tm();
 
@@ -266,6 +266,70 @@ newCarsArray.forEach(car => {
     listBox.append(listItem);
     // container.append(listBox);  // vi legge ikke lista ut ved å kommentere
 });
+
+
+
+console.log(myFunction(4, 7, 6));
+console.log(myFunction(8, 2, 9));
+
+// repetisjon
+// function declaration
+function myFunction(a, b, c) {
+    return a * b * c;
+};
+
+
+// function expression
+const myNewFunction = (person) => {
+    return {
+        firstname: person.name,
+        age: person.age
+    }
+}
+
+const personPerson = {
+    name: 'Sofia',
+    age: 54
+}
+
+const personPerson1 = {
+    name: 'Inger',
+    age: 64
+}
+
+console.log(myNewFunction(personPerson1));
+
+const personsPersons = [
+    {
+        name: 'Inger',
+        age: 64
+    },
+    {
+        name: 'Sofia',
+        age: 54
+    },
+    {
+        name: 'Ole',
+        age: 95
+    },
+    {
+        name: 'Frederikke',
+        age: 45
+    },
+    {
+        name: 'Nico',
+        age: 24
+    },
+];
+
+const newList = personsPersons.map((item) => {
+    console.log(item.name)
+    return item.name
+})
+console.log(newList)
+
+
+
 
 
 

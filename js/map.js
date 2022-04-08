@@ -44,7 +44,7 @@ export async function mapbox() {
     };
     // here we check our position and show where we are
     navigator.geolocation.getCurrentPosition((position) => {
-        new mapboxgl.Marker()
+        new mapboxgl.Marker({color: 'red'})
         .setLngLat([position.coords.longitude, position.coords.latitude])
         .addTo(map);
 
